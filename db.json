@@ -1,0 +1,26 @@
+{
+  "students": [
+    {
+      "firstname": "one",
+      "lastname": "Two",
+      "middlename": "Three",
+      "phone": "8888",
+      "email": "mmmm@iiki.kk",
+      "group": "109-109",
+      "direction": "Here",
+      "birthDay": "1999-09-09",
+      "id": 2
+    },
+    {
+      "firstname": "dff",
+      "lastname": "Student",
+      "middlename": "Olegovich",
+      "phone": "88888",
+      "email": "hhhh@mail.ru",
+      "group": "191-2222",
+      "direction": "Direction",
+      "birthDay": "1888-08-07",
+      "id": 4
+    }
+  ]
+}

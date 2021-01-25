@@ -1,0 +1,28 @@
+<!-- определяем формгрупппу формы и создаем инпуты с привязкой по формконтролНейм-->
+<form [formGroup]="studentForm">
+    <div class="row mb-2">
+        <input type="text" placeholder="Firstname" class="form-control col-2 mr-2" formControlName="firstname">
+        <input type="text" placeholder="Lastname" class="form-control col-2 mr-2" formControlName="lastname">
+        <input type="text" placeholder="Middlename" class="form-control col-2 mr-2" formControlName="middlename">
+
+        <input type="text" placeholder="Phone" class="form-control col-2 mr-2" formControlName="phone">
+        <input type="text" placeholder="Email" class="form-control col-2 mr-2" formControlName="email">
+    </div>
+
+    <div class="row mb-2">
+        
+        <input type="text" placeholder="Group" class="form-control col-3 mr-2" formControlName="group">
+        <input type="text" placeholder="Direction" class="form-control col-3 mr-2" formControlName="direction">
+        <input type="date" placeholder="birth" class="form-control col-3 mr-2" formControlName="birthDay">
+    </div>
+
+    <!-- если профиль добавляют -->
+    <button type="submit" class="btn btn-success" (click)="onAddStudent()" [disabled]="studentForm.invalid" *ngIf="!studentId && studentId !== 0">Add</button>
+
+    <!-- если профиль редактируют -->
+    <button type="submit" class="btn btn-success mr-2" (click)="onEditStudent()" [disabled]="studentForm.invalid" *ngIf="studentId || studentId === 0">Edit</button>
+    <button type="submit" class="btn btn-danger" (click)="onDeleteStudent()" *ngIf="studentId || studentId === 0">Delete</button>
+
+
+
+</form>
